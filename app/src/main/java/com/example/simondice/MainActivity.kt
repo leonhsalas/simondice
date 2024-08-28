@@ -22,7 +22,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.transition.Visibility
 import com.example.simondice.UI.gameViewModel
 import kotlinx.coroutines.delay
-import com.example.simondice.databinding.ActivityMainBinding
+import com.example.simondice.dataBinding.ActivityMainBinding
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "simon_says")
 
 class MainActivity : AppCompatActivity() {

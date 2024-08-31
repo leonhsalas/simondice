@@ -1,4 +1,4 @@
-package com.example.simondice.UI
+package com.example.simondice.ui
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -14,7 +14,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class gameViewModel(
+class GameViewModel(
     private val dataStore: DataStore<Preferences>
 ): ViewModel() {
      private val _message: MutableLiveData<String> = MutableLiveData()
@@ -110,7 +110,7 @@ class gameViewModel(
     companion object {
         fun provideFactory(dataStore: DataStore<Preferences>): ViewModelProvider.Factory = object : ViewModelProvider.Factory{
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return gameViewModel(dataStore) as T
+                return GameViewModel(dataStore) as T
             }
         }
     }
